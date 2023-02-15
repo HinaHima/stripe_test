@@ -1,0 +1,1 @@
+STRIPE_API_KEY = "sk_test_51MajebFqwRvblj1KSMgFTep613RzvEXfdzC1KZHFkid9Wmuqr5Yi8KiUl1uJMk3xW5M67jgPbHigaBm7GPbiogN400nw1u0ByS"

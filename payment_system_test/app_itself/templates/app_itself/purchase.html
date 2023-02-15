@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Buy Item 1</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <h1>Product name - {{ name }}</h1>
+    <p>Product description - {{ description }}</p>
+    <p>Product price - {{ price }} {{ currency }}</p>
+    <form id="buy-form" action="{% url 'buy' id %}" method="GET">
+    <button>Buy</button>
+    <form>
+    </body>
+</html>
+

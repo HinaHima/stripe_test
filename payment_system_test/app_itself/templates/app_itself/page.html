@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="windows-1251" />
+        <title>Index template</title>
+    </head>
+</html>
+
+var stripe = Stripe('pk_test_51MajebFqwRvblj1K5qYFniXefXPMe3WJTkarhHVIBkyfZ7ftdzdvknPo0bTdxNnZmkbRDqkKR6oEoOBl9NQwcCOi00Ggxw8L3D');
+var buyButton = document.getElementById('buy-button');
+buyButton.addEventListener('click', function() {
+  fetch("{% url 'buy'  id %}", {method: 'GET'})
+  .then(function(response) { 
+    return response.json();
+})
+  .then(function(session) {
+     stripe.redirectToCheckout({ sessionId: session.id })
+});
+})
